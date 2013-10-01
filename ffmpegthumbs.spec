@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
-Version: 4.10.1
-Release: 2%{?dist}
+Version: 4.11.1
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -56,6 +56,12 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Tue Oct 01 2013 Rex Dieter <rdieter@fedoraproject.org> 4.11.1-1
+- 4.11.1
+
+* Thu Aug 15 2013 Nicolas Chauvet <kwizart@gmail.com> - 4.10.1-3
+- Rebuilt for FFmpeg 2.0.x
+
 * Sun May 26 2013 Nicolas Chauvet <kwizart@gmail.com> - 4.10.1-2
 - Rebuilt for x264/FFmpeg
 
