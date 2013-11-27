@@ -1,6 +1,6 @@
 
 Name:    ffmpegthumbs 
-Version: 4.11.1
+Version: 4.11.3
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Nov 27 2013 Rex Dieter <rdieter@fedoraproject.org> 4.11.3-1
+- 4.11.3
+
 * Tue Oct 01 2013 Rex Dieter <rdieter@fedoraproject.org> 4.11.1-1
 - 4.11.1
 
