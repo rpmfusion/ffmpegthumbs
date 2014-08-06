@@ -1,6 +1,6 @@
 
 Name:    ffmpegthumbs 
-Version: 4.13.3
+Version: 4.13.97
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -14,16 +14,13 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %endif
 Source0: http://download.kde.org/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
 
-BuildRequires: kdelibs4-devel >= %{version}
+BuildRequires: kdelibs4-devel
 BuildRequires: libjpeg-devel
 BuildRequires: pkgconfig(libavcodec) pkgconfig(libavformat) pkgconfig(libavutil) pkgconfig(libswscale)
 
 Requires: kdelibs4%{?_isa} >= %{_kde4_version}
 
 Provides: kffmpegthumbnailer = %{version}-%{release}
-%if 0%{?fedora} && 0%{?fedora} < 19
-Obsoletes: kdemultimedia-extras-freeworld < %{version}-%{release}
-%endif
 Provides: kdemultimedia-extras-freeworld = %{version}-%{release}
 
 %description
@@ -56,6 +53,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Aug 06 2014 Rex Dieter <rdieter@fedoraproject.org> 4.13.97-1
+- 4.13.97
+
 * Wed Aug 06 2014 Rex Dieter <rdieter@fedoraproject.org> 4.13.3-1
 - 4.13.3
 
