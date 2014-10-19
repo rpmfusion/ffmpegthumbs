@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
 Version: 4.13.97
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -53,6 +53,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Sun Oct 19 2014 Sérgio Basto <sergio@serjux.com> - 4.13.97-3
+- Rebuilt for FFmpeg 2.4.3
+
 * Fri Sep 26 2014 Nicolas Chauvet <kwizart@gmail.com> - 4.13.97-2
 - Rebuilt for FFmpeg 2.4.x
 
