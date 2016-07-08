@@ -51,7 +51,7 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 %files
 %license COPYING
-%{_kf5_libdir}/qt5/plugins/ffmpegthumbs.so
+%{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
