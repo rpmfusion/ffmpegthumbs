@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
-Version: 4.13.97
-Release: 3%{?dist}
+Version: 16.04.2
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -12,13 +12,17 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %else
 %global stable stable
 %endif
-Source0: http://download.kde.org/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:  Port-to-libavfilter-for-deinterlacing.patch
 
-BuildRequires: kdelibs4-devel
-BuildRequires: libjpeg-devel
-BuildRequires: pkgconfig(libavcodec) pkgconfig(libavformat) pkgconfig(libavutil) pkgconfig(libswscale)
+BuildRequires: extra-cmake-modules
+BuildRequires: pkgconfig(libjpeg)
+BuildRequires: cmake(KF5KIO)
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: pkgconfig(libavformat)
+BuildRequires: pkgconfig(libavutil)
+BuildRequires: pkgconfig(libswscale)
 
-Requires: kdelibs4%{?_isa} >= %{_kde4_version}
 
 Provides: kffmpegthumbnailer = %{version}-%{release}
 Provides: kdemultimedia-extras-freeworld = %{version}-%{release}
@@ -28,15 +32,14 @@ KDE ffmpegthumbnailer service
 
 
 %prep
-%setup -q 
+%setup -q
+%patch0 -p1
 
 
 %build
 mkdir -p %{_target_platform}
 pushd %{_target_platform}
-%{cmake_kde4} \
-  -DKDE4_BUILD_TESTS:BOOL=ON \
-  ..
+%{cmake_kf5} ..
 popd
 
 make %{?_smp_mflags} -C %{_target_platform}
@@ -47,12 +50,15 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %files
-%doc COPYING
-%{_kde4_libdir}/kde4/ffmpegthumbs.so
-%{_kde4_datadir}/kde4/services/ffmpegthumbs.desktop
-
+%license COPYING
+%{_kf5_libdir}/qt5/plugins/ffmpegthumbs.so
+%{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Fri Jul 08 2016 Leigh Scott <leigh123linux@googlemail.com> - 16.04.2-1
+- Update to 16.04.2 release
+- patch for ffmpeg-3.0
+
 * Sun Oct 19 2014 Sérgio Basto <sergio@serjux.com> - 4.13.97-3
 - Rebuilt for FFmpeg 2.4.3
 
