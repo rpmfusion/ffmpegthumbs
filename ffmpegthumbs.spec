@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
 Version: 16.04.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -16,7 +16,11 @@ Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%
 Patch0:  Port-to-libavfilter-for-deinterlacing.patch
 
 BuildRequires: extra-cmake-modules
+%if 0%{?fedora} > 23
 BuildRequires: pkgconfig(libjpeg)
+%else
+BuildRequires: libjpeg-devel
+%endif
 BuildRequires: cmake(KF5KIO)
 BuildRequires: pkgconfig(libavcodec)
 BuildRequires: pkgconfig(libavformat)
@@ -55,6 +59,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Fri Jul 08 2016 Leigh Scott <leigh123linux@googlemail.com> - 16.04.2-2
+- fix f23 build
+
 * Fri Jul 08 2016 Leigh Scott <leigh123linux@googlemail.com> - 16.04.2-1
 - Update to 16.04.2 release
 - patch for ffmpeg-3.0
