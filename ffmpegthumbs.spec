@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
 Version: 16.04.2
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -59,6 +59,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Sat Jul 30 2016 Julian Sikorski <belegdol@fedoraproject.org> - 16.04.2-3
+- Rebuilt for ffmpeg-3.1.1
+
 * Fri Jul 08 2016 Leigh Scott <leigh123linux@googlemail.com> - 16.04.2-2
 - fix f23 build
 
