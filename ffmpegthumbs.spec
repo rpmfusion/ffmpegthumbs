@@ -1,7 +1,7 @@
 
 Name:    ffmpegthumbs 
-Version: 16.04.2
-Release: 3%{?dist}
+Version: 16.04.3
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -59,6 +59,12 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Sat Aug 20 2016 Sérgio Basto <sergio@serjux.com> - 16.04.3-1
+- Update to 16.04.3, rfbz #4164, following kdemultimedia of Fedora proper, 
+  the ffmpegthumbs package is not ffmpegthumbnailer, neither kffmpegthumbnailer
+  packages, these 3 packages have a very similar names but just ffmpegthumbs is
+  part of kdemultimedia. 
+
 * Sat Jul 30 2016 Julian Sikorski <belegdol@fedoraproject.org> - 16.04.2-3
 - Rebuilt for ffmpeg-3.1.1
 
