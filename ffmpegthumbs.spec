@@ -1,6 +1,5 @@
-
-Name:    ffmpegthumbs 
-Version: 16.04.3
+Name:    ffmpegthumbs
+Version: 16.08.1
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -13,7 +12,6 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %global stable stable
 %endif
 Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:  Port-to-libavfilter-for-deinterlacing.patch
 
 BuildRequires: extra-cmake-modules
 %if 0%{?fedora} > 23
@@ -37,7 +35,6 @@ KDE ffmpegthumbnailer service
 
 %prep
 %setup -q
-%patch0 -p1
 
 
 %build
@@ -59,11 +56,15 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Thu Sep 15 2016 Sérgio Basto <sergio@serjux.com> - 16.08.1-1
+- Update to 16.08.1
+- Drop Port-to-libavfilter-for-deinterlacing.patch is upstreamed.
+
 * Sat Aug 20 2016 Sérgio Basto <sergio@serjux.com> - 16.04.3-1
-- Update to 16.04.3, rfbz #4164, following kdemultimedia of Fedora proper, 
+- Update to 16.04.3, rfbz #4164, following kdemultimedia of Fedora proper,
   the ffmpegthumbs package is not ffmpegthumbnailer, neither kffmpegthumbnailer
   packages, these 3 packages have a very similar names but just ffmpegthumbs is
-  part of kdemultimedia. 
+  part of kdemultimedia.
 
 * Sat Jul 30 2016 Julian Sikorski <belegdol@fedoraproject.org> - 16.04.2-3
 - Rebuilt for ffmpeg-3.1.1
