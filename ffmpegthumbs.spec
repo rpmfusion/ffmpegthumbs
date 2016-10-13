@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 16.08.1
+Version: 16.08.2
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Thu Oct 13 2016 Sérgio Basto <sergio@serjux.com> - 16.08.2-1
+- Update to 16.08.2
+
 * Thu Sep 15 2016 Sérgio Basto <sergio@serjux.com> - 16.08.1-1
 - Update to 16.08.1
 - Drop Port-to-libavfilter-for-deinterlacing.patch is upstreamed.
