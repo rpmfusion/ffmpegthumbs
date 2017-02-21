@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 16.08.2
+Version: 16.12.2
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Tue Feb 21 2017 Sérgio Basto <sergio@serjux.com> - 16.12.2-1
+- Update ffmpegthumbs to 16.12.2 following Fedora KDE applications
+
 * Thu Oct 13 2016 Sérgio Basto <sergio@serjux.com> - 16.08.2-1
 - Update to 16.08.2
 
