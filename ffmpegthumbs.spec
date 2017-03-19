@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
 Version: 16.12.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Sun Mar 19 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 16.12.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Tue Feb 21 2017 Sérgio Basto <sergio@serjux.com> - 16.12.2-1
 - Update ffmpegthumbs to 16.12.2 following Fedora KDE applications
 
