@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
-Version: 17.04.2
-Release: 2%{?dist}
+Version: 17.08.1
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Sun Oct 08 2017 Sérgio Basto <sergio@serjux.com> - 17.08.1-1
+- Update to 17.08.1
+
 * Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 17.04.2-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
