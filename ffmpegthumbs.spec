@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
 Version: 17.08.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -56,6 +56,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 
 %changelog
+* Tue Oct 17 2017 Leigh Scott <leigh123linux@googlemail.com> - 17.08.1-2
+- Rebuild for ffmpeg update
+
 * Sun Oct 08 2017 Sérgio Basto <sergio@serjux.com> - 17.08.1-1
 - Update to 17.08.1
 
