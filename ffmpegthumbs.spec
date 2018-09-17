@@ -14,12 +14,9 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 
 BuildRequires: extra-cmake-modules
-%if 0%{?fedora} > 23
 BuildRequires: pkgconfig(libjpeg)
-%else
-BuildRequires: libjpeg-devel
-%endif
 BuildRequires: cmake(KF5KIO)
+BuildRequires: cmake(KF5I18n)
 BuildRequires: pkgconfig(libavcodec)
 BuildRequires: pkgconfig(libavformat)
 BuildRequires: pkgconfig(libavutil)
