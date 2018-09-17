@@ -51,6 +51,7 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %license COPYING
 %{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
+%{_kf5_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
 
 %changelog
 * Mon Sep 17 2018 Sérgio Basto <sergio@serjux.com> - 18.08.1-1
