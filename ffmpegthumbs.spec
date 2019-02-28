@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 18.08.1
+Version: 18.12.2
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -31,29 +31,35 @@ KDE ffmpegthumbnailer service
 
 
 %prep
-%setup -q
+%autosetup
 
 
 %build
-mkdir -p %{_target_platform}
+mkdir %{_target_platform}
 pushd %{_target_platform}
 %{cmake_kf5} ..
 popd
 
-make %{?_smp_mflags} -C %{_target_platform}
+%make_build -C %{_target_platform}
 
 
 %install
 make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
+%find_lang ffmpegthumbs
 
-%files
+
+%files -f ffmpegthumbs.lang
 %license COPYING
 %{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 %{_kf5_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
 
+
 %changelog
+* Thu Feb 28 2019 Rex Dieter <rdieter@fedoraproject.org> - 18.12.2-1
+- 18.12.2
+
 * Mon Sep 17 2018 Sérgio Basto <sergio@serjux.com> - 18.08.1-1
 - Update ffmpegthumbs to 18.08.1
 
