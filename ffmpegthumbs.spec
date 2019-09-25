@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
-Version: 18.12.3
-Release: 2%{?dist}
+Version: 19.08.1
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -57,6 +57,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Sep 25 2019 Leigh Scott <leigh123linux@googlemail.com> - 19.08.1-1
+- 19.08.1
+
 * Tue Aug 06 2019 Leigh Scott <leigh123linux@gmail.com> - 18.12.3-2
 - Rebuild for new ffmpeg version
 
