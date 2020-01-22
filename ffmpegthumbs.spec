@@ -54,11 +54,13 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 %{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 %{_kf5_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
+%{_kf5_metainfodir}/org.kde.%{name}.metainfo.xml
 
 
 %changelog
 * Wed Jan 22 2020 Sérgio Basto <sergio@serjux.com> - 19.12.1-1
 - Update ffmpegthumbs to 19.12.1
+- Fix build
 
 * Wed Sep 25 2019 Leigh Scott <leigh123linux@googlemail.com> - 19.08.1-1
 - 19.08.1
