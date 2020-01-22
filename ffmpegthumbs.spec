@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 19.08.1
+Version: 19.12.1
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -11,7 +11,7 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %else
 %global stable stable
 %endif
-Source0: http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 
 BuildRequires: extra-cmake-modules
 BuildRequires: pkgconfig(libjpeg)
@@ -57,6 +57,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Jan 22 2020 Sérgio Basto <sergio@serjux.com> - 19.12.1-1
+- Update ffmpegthumbs to 19.12.1
+
 * Wed Sep 25 2019 Leigh Scott <leigh123linux@googlemail.com> - 19.08.1-1
 - 19.08.1
 
