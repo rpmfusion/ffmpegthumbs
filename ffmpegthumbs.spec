@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
 Version: 19.12.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -58,6 +58,9 @@ make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
 
 
 %changelog
+* Mon Aug 17 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 19.12.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Sat Feb 22 2020 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 19.12.1-3
 - Rebuild for ffmpeg-4.3 git
 
