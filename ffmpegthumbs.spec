@@ -1,3 +1,5 @@
+%undefine __cmake_in_source_build
+
 Name:    ffmpegthumbs
 Version: 19.12.1
 Release: 4%{?dist}
@@ -35,16 +37,13 @@ KDE ffmpegthumbnailer service
 
 
 %build
-mkdir %{_target_platform}
-pushd %{_target_platform}
-%{cmake_kf5} ..
-popd
+%{cmake_kf5}
 
-%make_build -C %{_target_platform}
+%cmake3_build
 
 
 %install
-make install/fast -C %{_target_platform} DESTDIR=%{buildroot}
+%cmake3_install
 
 %find_lang ffmpegthumbs
 
