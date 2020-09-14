@@ -1,8 +1,8 @@
 %undefine __cmake_in_source_build
 
 Name:    ffmpegthumbs
-Version: 19.12.1
-Release: 4%{?dist}
+Version: 20.08.1
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -57,6 +57,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Mon Sep 14 2020 Sérgio Basto <sergio@serjux.com> - 20.08.1-1
+- Update ffmpegthumbs to 20.08.1
+
 * Mon Aug 17 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 19.12.1-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
