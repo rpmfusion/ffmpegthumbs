@@ -2,7 +2,7 @@
 
 Name:    ffmpegthumbs
 Version: 20.08.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -57,6 +57,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Thu Dec 31 2020 Leigh Scott <leigh123linux@gmail.com> - 20.08.1-2
+- Rebuilt for new ffmpeg snapshot
+
 * Mon Sep 14 2020 Sérgio Basto <sergio@serjux.com> - 20.08.1-1
 - Update ffmpegthumbs to 20.08.1
 
