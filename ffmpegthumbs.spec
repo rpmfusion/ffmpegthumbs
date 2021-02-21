@@ -23,6 +23,7 @@ BuildRequires: pkgconfig(libavcodec)
 BuildRequires: pkgconfig(libavformat)
 BuildRequires: pkgconfig(libavutil)
 BuildRequires: pkgconfig(libswscale)
+BuildRequires: pkgconfig(taglib)
 
 
 Provides: kffmpegthumbnailer = %{version}-%{release}
@@ -59,6 +60,7 @@ KDE ffmpegthumbnailer service
 %changelog
 * Sun Feb 21 2021 Sérgio Basto <sergio@serjux.com> - 20.12.2-1
 - Update ffmpegthumbs to 20.12.2
+- Add missing dependency on taglib
 
 * Wed Feb 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 20.08.1-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
