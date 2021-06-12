@@ -54,6 +54,7 @@ KDE ffmpegthumbnailer service
 %{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 %{_kf5_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
+%{_kf5_datadir}/qlogging-categories5/ffmpegthumbs.categories
 %{_kf5_metainfodir}/org.kde.%{name}.metainfo.xml
 
 
