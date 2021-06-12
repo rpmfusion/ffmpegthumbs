@@ -1,7 +1,7 @@
 %undefine __cmake_in_source_build
 
 Name:    ffmpegthumbs
-Version: 20.12.2
+Version: 21.04.2
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -58,6 +58,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Sat Jun 12 2021 Sérgio Basto <sergio@serjux.com> - 21.04.2-1
+- Update ffmpegthumbs to 21.04.2
+
 * Sun Feb 21 2021 Sérgio Basto <sergio@serjux.com> - 20.12.2-1
 - Update ffmpegthumbs to 20.12.2
 - Add missing dependency on taglib
