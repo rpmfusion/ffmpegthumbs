@@ -2,7 +2,7 @@
 
 Name:    ffmpegthumbs
 Version: 21.04.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -59,6 +59,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Mon Aug 02 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 21.04.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sat Jun 12 2021 Sérgio Basto <sergio@serjux.com> - 21.04.2-1
 - Update ffmpegthumbs to 21.04.2
 
