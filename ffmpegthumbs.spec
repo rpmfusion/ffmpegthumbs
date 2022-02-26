@@ -1,8 +1,8 @@
 %undefine __cmake_in_source_build
 
 Name:    ffmpegthumbs
-Version: 21.04.2
-Release: 4%{?dist}
+Version: 21.12.2
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -13,7 +13,8 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %else
 %global stable stable
 %endif
-Source0: http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0: https://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:  https://invent.kde.org/multimedia/ffmpegthumbs/-/merge_requests/16.patch
 
 BuildRequires: extra-cmake-modules
 BuildRequires: pkgconfig(libjpeg)
@@ -34,7 +35,7 @@ KDE ffmpegthumbnailer service
 
 
 %prep
-%autosetup
+%autosetup -p1
 
 
 %build
@@ -46,11 +47,9 @@ KDE ffmpegthumbnailer service
 %install
 %cmake3_install
 
-%find_lang ffmpegthumbs
 
-
-%files -f ffmpegthumbs.lang
-%license COPYING
+%files
+%license LICENSES/*
 %{_kf5_qtplugindir}/ffmpegthumbs.so
 %{_kf5_datadir}/kservices5/ffmpegthumbs.desktop
 %{_kf5_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
@@ -59,6 +58,11 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Sat Feb 26 2022 Sérgio Basto <sergio@serjux.com> - 21.12.2-1
+- Update ffmpegthumbs to 21.12.2
+- Add ffmpeg-5 PR
+- lang has disappear from the package
+
 * Wed Feb 09 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 21.04.2-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
