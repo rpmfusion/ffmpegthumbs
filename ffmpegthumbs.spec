@@ -1,7 +1,5 @@
-%undefine __cmake_in_source_build
-
 Name:    ffmpegthumbs
-Version: 21.12.2
+Version: 22.04.0
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -14,18 +12,15 @@ URL:     https://projects.kde.org/projects/kde/kdemultimedia/%{name}
 %global stable stable
 %endif
 Source0: https://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:  https://invent.kde.org/multimedia/ffmpegthumbs/-/merge_requests/16.patch
 
 BuildRequires: extra-cmake-modules
 BuildRequires: pkgconfig(libjpeg)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5I18n)
-BuildRequires: pkgconfig(libavcodec)
-BuildRequires: pkgconfig(libavformat)
-BuildRequires: pkgconfig(libavutil)
-BuildRequires: pkgconfig(libswscale)
+BuildRequires: ffmpeg-devel
 BuildRequires: pkgconfig(taglib)
 
+Requires: ffmpeg-libs
 
 Provides: kffmpegthumbnailer = %{version}-%{release}
 Provides: kdemultimedia-extras-freeworld = %{version}-%{release}
@@ -58,6 +53,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Tue Apr 26 2022 Leigh Scott <leigh123linux@gmail.com> - 22.04.0-1
+- Update ffmpegthumbs to 22.04.0
+
 * Sat Feb 26 2022 Sérgio Basto <sergio@serjux.com> - 21.12.2-1
 - Update ffmpegthumbs to 21.12.2
 - Add ffmpeg-5 PR
