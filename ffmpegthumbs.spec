@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 22.04.0
+Version: 22.04.3
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -53,6 +53,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Thu Aug 04 2022 Leigh Scott <leigh123linux@gmail.com> - 22.04.3-1
+- Update ffmpegthumbs to 22.04.3
+
 * Tue Apr 26 2022 Leigh Scott <leigh123linux@gmail.com> - 22.04.0-1
 - Update ffmpegthumbs to 22.04.0
 
