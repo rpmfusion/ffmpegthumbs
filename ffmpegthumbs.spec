@@ -1,6 +1,6 @@
 Name:    ffmpegthumbs
-Version: 22.04.3
-Release: 2%{?dist}
+Version: 22.08.1
+Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
 License: GPLv2+
@@ -53,6 +53,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Sat Sep 24 2022 Sérgio Basto <sergio@serjux.com> - 22.08.1-1
+- Update ffmpegthumbs to 22.08.1
+
 * Sun Aug 07 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 22.04.3-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild and ffmpeg
   5.1
