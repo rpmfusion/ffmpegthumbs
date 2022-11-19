@@ -1,5 +1,5 @@
 Name:    ffmpegthumbs
-Version: 22.08.1
+Version: 22.08.3
 Release: 1%{?dist}
 Summary: KDE ffmpegthumbnailer service
 
@@ -53,6 +53,9 @@ KDE ffmpegthumbnailer service
 
 
 %changelog
+* Sat Nov 19 2022 Sérgio Basto <sergio@serjux.com> - 22.08.3-1
+- Update ffmpegthumbs to 22.08.3
+
 * Sat Sep 24 2022 Sérgio Basto <sergio@serjux.com> - 22.08.1-1
 - Update ffmpegthumbs to 22.08.1
 
